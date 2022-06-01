@@ -1,0 +1,20 @@
+<div class="col-4 animate__backInRight animate__animated">
+	<div class="card bg-light my-5 shadow">
+		<h3 class="card-header">{{article.title}}-{{article.id}}</h3>
+		<img height="350px" src="{{article.image}}" alt="Card image">
+		<div class="card-body">
+			<p class="card-text">{{article.intro}}</p>
+			<p>{{article.content | raw}}</p>
+			<div class="my-3">
+				<a href="#" class="card-link"></a>
+			</div>
+                    <a href="{{path("article_show" , {"slug": article.slug})}}" class="btn btn-primary rounded">Lire la suite</a>
+		</div>
+
+		<div class="card-footer text-muted">
+			Créé le
+			{{article.createdAt | date('Dd/m/y à H:i' , "Europe/Paris")}}
+
+		</div>
+	</div>
+</div>

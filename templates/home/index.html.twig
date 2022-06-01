@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil
+{% endblock %}
+{% block body %}
+	<div class="container">
+
+		<div class="jumbotron text-center my-5 shadow animate__animated animate__backInDown">
+			<h1 class="display-4 animate__animated animate__zoomInDown animate__delay-1s">Bienvenue sur
+				<span class="text-info">YesCode</span>
+				!</h1>
+			<p class="lead animate__animated animate__zoomInDown animate__delay-2s">Coucou toi !
+			</p>
+			<hr class="my-4">
+			<p class=" animate__animated animate__zoomInDown animate__delay-3s">Retrouvez nos derniers articles sur les technos les plus hype du moment !</p>
+			<p class="lead">
+				<a class="btn btn-primary btn-lg animate__animated animate__zoomInDown animate__delay-4s" href="#" role="button">
+					&lt;/&gt; Actualités &lt;/&gt;
+				</a>
+			</p>
+		</div>
+
+		<h2 class="text-center h1 animate__animated animate__backInLeft">Les derniers articles</h2>
+
+		{# {% set article = [
+        [ "Symfony",  "Symfony est un framework PHP complet", "Fabien Potencier","https://neo7.fr/wp-content/uploads/2018/01/symfony-logo.png"],
+        [ "Angular",  "Angular le framework de Google", "Angus Lard","https://angular.io/assets/images/logos/angular/angular.svg"],
+        [ "Laravel",  "Symfony est un framework PHP complet", "Fabien Potencier","https://jf-blog.fr/wp-content/uploads/2018/07/laravel-logo.png"],
+    ] %} #}
+
+		{# <pre>
+				        {{ dump(article) }}
+				    </pre> #}
+
+		<div class="row">
+			{% include  "partials/card.article.html.twig" %}
+		</div>
+
+
+	</div>
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article{% endblock %}
+
+{% block body %}
+
+<div class="row">
+<<<<<<< HEAD
+            {% for article in articles %}
+=======
+            {% for item in article| reverse %}
+>>>>>>> 1728f283ee0526c18e1daf6b0540b669e0feb059
+
+		{% include "/article/template.article.html.twig" %}
+                    {% endfor %}
+</div>
+
+
+{# <pre>
+      {{ dump(articles[0]) }}
+</pre> #}
+
+
+
+{% endblock %}
